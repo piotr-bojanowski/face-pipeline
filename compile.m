@@ -5,9 +5,13 @@ mex -outdir face-detection/private -O face-detection/src/shiftdt.cc
 mex -outdir face-detection/private -O face-detection/src/features.cc
 mex -outdir face-detection/private -O face-detection/src/fconvsse.cc -o fconv
 
-% % 1) multithreaded convolution using blas
+mex -outdir tracking/private -O tracking/src/klt_goodfeats.cxx
+mex -outdir tracking/private -O tracking/src/klt_trackfeat.cxx
+mex -outdir tracking/private -O tracking/src/klt_mextrack.cxx
+mex -outdir tracking/private -O tracking/src/mre_boxfilter.cxx
+mex -outdir tracking/private -O tracking/src/mre_maxelem.cxx
+
+
 % % mex -O fconvblas.cc -lmwblas -o fconv
-% % 2) mulththreaded convolution without blas
 % % mex -O fconvMT.cc -o fconv
-% % 3) basic convolution, very compatible
 % % mex -O fconv.cc

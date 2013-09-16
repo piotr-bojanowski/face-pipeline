@@ -1,4 +1,4 @@
-function box = DetectFace(   frame , dump_string, facemodel)
+function DetectFace(frame , dump_string, det_string, facemodel)
 
 % load specified frame from a dump folder
 impath  = sprintf(dump_string, frame);
@@ -34,5 +34,8 @@ end
 
 % concatenate bbox with pose
 box = [box, pose'];
+
+detpath = sprintf(det_string, frame);
+save(detpath, 'box');
 
 end
