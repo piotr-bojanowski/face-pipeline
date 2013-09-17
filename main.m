@@ -1,11 +1,17 @@
 
+vl_feat_path = '/meleze/data0/libs/vlfeat-0.9.14/toolbox/vl_setup';
+
+dump_dir = '/sequoia/data1/bojanows/thesis/AutoNaChar/S05E02/dump';
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 addpath('face-detection');
 addpath('tracking');
 addpath('features-speakers');
 
-run('/meleze/data0/libs/vlfeat-0.9.14/toolbox/vl_setup');
+run(vl_feat_path);
 
-dump_string = '/sequoia/data1/bojanows/thesis/AutoNaChar/S05E02/dump/S05E02_%06d.jpeg';
+dump_string = fullfile(dump_dir, 'S05E02_%06d.jpeg');
 model_dir   = 'models';
 result_dir  = 'results';
 
