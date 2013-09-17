@@ -1,6 +1,9 @@
-function track_in_shots(result_dir, shotpath, conf_thresh, dump_string, det_string)
+function track_in_shots(result_dir, conf_thresh, dump_string)
 
+shotpath = fullfile(result_dir, 'shots.txt');
 shots   = read_shots(shotpath);
+
+det_string = fullfile(result_dir, '%06d.mat');
 
 for i = 1:size(shots, 2)
     s1 = shots(1, i);
