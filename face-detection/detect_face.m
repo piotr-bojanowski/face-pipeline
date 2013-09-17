@@ -1,4 +1,4 @@
-function DetectFace(frame , dump_string, det_string, facemodel)
+function detect_face(frame , dump_string, det_string, facemodel)
 
 % load specified frame from a dump folder
 impath  = sprintf(dump_string, frame);

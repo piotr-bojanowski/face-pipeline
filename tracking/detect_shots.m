@@ -1,4 +1,6 @@
-function detectShots(s1, s2, dump_string, shotpath)
+function detect_shots(result_dir, dump_string, s1, s2)
+
+shotpath    = fullfile(result_dir, 'shots.txt');
 
 chunk_size  = 500;
 

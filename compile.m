@@ -11,7 +11,16 @@ mex -outdir tracking/private -O tracking/src/klt_mextrack.cxx
 mex -outdir tracking/private -O tracking/src/mre_boxfilter.cxx
 mex -outdir tracking/private -O tracking/src/mre_maxelem.cxx
 
-
-% % mex -O fconvblas.cc -lmwblas -o fconv
-% % mex -O fconvMT.cc -o fconv
-% % mex -O fconv.cc
+mex -outdir features-speakers/private -O features-speakers/src/mre_maxelem.cxx
+mex -outdir features-speakers/private -O features-speakers/src/mre_boxfilter.cxx
+mex -outdir features-speakers/private -O features-speakers/src/mre_resizebilinear.cxx
+mex -outdir features-speakers/private -O features-speakers/src/mre_intimg_cols.cxx
+mex -outdir features-speakers/private -O features-speakers/src/mre_haarcascade_masked.cxx
+mex -outdir features-speakers/private -O features-speakers/src/mre_disttransform.cxx
+mex -outdir features-speakers/private -O features-speakers/src/klt_goodfeats.cxx
+mex -outdir features-speakers/private -O features-speakers/src/klt_mextrack.cxx
+mex -outdir features-speakers/private -O features-speakers/src/klt_trackfeat.cxx
+mex -outdir features-speakers/private -O features-speakers/src/vgg_k_nearest_neighbour.cxx
+mex -outdir features-speakers/private -O features-speakers/src/vgg_ssd_aux.cxx
+mex -outdir features-speakers/private -O features-speakers/src/vgg_interp2.cxx
+mex -outdir features-speakers/private -O features-speakers/src/patrick_hog.c
