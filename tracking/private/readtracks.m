@@ -7,7 +7,7 @@ function tracks = readtracks(tracksfname)
 %
 %Following this header, list all bounding boxes in the format:
 %
-%<frame> <x> <y> <w> <h> <score> 
+%<frame> <x1> <y1> <x2> <y2> <pose> <score> 
 %
   
 l = readlines(tracksfname);

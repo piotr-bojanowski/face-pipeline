@@ -7,13 +7,13 @@ function writetracks(tracks,tracksfname)
 %
 %Following this header, list all bounding boxes in the format:
 %
-%<frame> <x> <y> <w> <h> <score>
+%<frame> <x1> <y1> <x2> <y2> <pose> <score>
 %
 
 % ids=cat(1,tracks(:).track);
 
 fd = fopen(tracksfname, 'w');
-fprintf(fd, '# format: <frame> <x> <y> <w> <h> <pose> <score>\n#\n');
+fprintf(fd, '# format: <frame> <x1> <y1> <x2> <y2> <pose> <score>\n#\n');
 
 if ~isempty(tracks)
     t = tracks(1);

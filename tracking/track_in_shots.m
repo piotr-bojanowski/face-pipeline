@@ -6,7 +6,7 @@ for i = 1:size(shots, 2)
     s1 = shots(1, i);
     s2 = shots(2, i);
     
-    shotString = sprintf('%07d_%07d', s1, s2);
+    shotString = sprintf('%06d_%06d', s1, s2);
     
     %%% DETECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     detfname    = sprintf('%s_dets.txt', shotString);
@@ -24,7 +24,7 @@ for i = 1:size(shots, 2)
     writetracks(det, detpath);
     
     %%% AGGLOMERATIVE CLUSTERING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    trackfname  = sprintf('%s_track_%3.2f.txt', shotString, conf_thresh);
+    trackfname  = sprintf('%s_track.txt', shotString);
     trackpath   = fullfile(result_dir, trackfname);
     det = readtracks(detpath);
     
@@ -37,7 +37,7 @@ for i = 1:size(shots, 2)
     writetracks(tracks,trackpath);
     
     %%% POST-PROCESSING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    proctrackfname = sprintf('%s_processedtrack_%3.2f.txt', shotString, conf_thresh);
+    proctrackfname = sprintf('%s_processedtrack.txt', shotString);
     proctrackpath = fullfile(result_dir, proctrackfname);
     tracks = readtracks(trackpath);
     proctracks = processtracks(tracks);
