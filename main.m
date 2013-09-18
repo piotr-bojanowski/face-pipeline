@@ -1,7 +1,7 @@
 
 vl_feat_path = '/meleze/data0/libs/vlfeat-0.9.14/toolbox/vl_setup';
 
-dump_dir = '/sequoia/data1/bojanows/thesis/AutoNaChar/S05E02/dump';
+dump_dir = 'dump';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -11,7 +11,7 @@ addpath('features-speakers');
 
 run(vl_feat_path);
 
-dump_string = fullfile(dump_dir, 'S05E02_%06d.jpeg');
+dump_string = fullfile(dump_dir, '%06d.jpg');
 model_dir   = 'models';
 result_dir  = 'results';
 
