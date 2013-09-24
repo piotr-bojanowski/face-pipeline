@@ -8,7 +8,7 @@ dump_dir = 'dump';
 addpath('face-detection');
 addpath('tracking');
 addpath('features-speakers');
-% addpath('generate-video');
+addpath('compute-kernels');
 
 run(vl_feat_path);
 
@@ -20,7 +20,7 @@ if ~exist(result_dir, 'dir')
     mkdir(result_dir);
 end
 
-s1  = 14870;
+s1  = 14800;
 s2  = 14920;
 
 face_detection(result_dir, model_dir, dump_string, s1, s2);
@@ -29,9 +29,9 @@ detect_shots(result_dir, dump_string, s1, s2);
 
 track_in_shots(result_dir, -0.6, dump_string);
 
-tracks_to_facedets(result_dir, model_dir, dump_string);
+tracks_to_facedets(result_dir, model_dir, dump_string, s1, s2);
 
 features_and_speakers(result_dir, model_dir, dump_string);
 
-%%% use the following on unix systems with ffmpeg installed
-% tracksvideo(result_dir, dump_string);
+facedets_kernel(result_dir);
+

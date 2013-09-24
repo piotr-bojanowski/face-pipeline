@@ -1,4 +1,4 @@
-function writetracks(tracks,tracksfname)
+function writetracks(tracks, tracksfname)
 
 %
 % id: ...
