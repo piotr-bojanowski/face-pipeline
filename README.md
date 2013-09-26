@@ -21,7 +21,11 @@ http://www.vlfeat.org/download/vlfeat-0.9.14-bin.tar.gz
 References
 ===================================== 
 
-Runing the code
+[1] X. Zhu, D. Ramanan. Face detection, pose estimation and landmark localization in the wild. CVPR 2012.
+
+[2] J. Sivic, M. Everingham and A. Zisserman. "Who are you?" : Learning person specific classifiers from video. CVPR 2009.
+
+Running the code
 =====================================
 
 To run this code you will need to have vl_feat working on your computer.
