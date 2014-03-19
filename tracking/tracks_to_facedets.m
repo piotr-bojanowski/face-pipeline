@@ -11,7 +11,7 @@ function tracks_to_facedets(result_dir, model_dir, dump_string, s1, s2)
 load(fullfile(model_dir, 'W.mat'));
 load(fullfile(model_dir, 'pose_cor.mat'));
 
-listing = dir(fullfile(result_dir,  sprintf('%06d_%06d_processedtrack.txt', s1, s2)));
+listing = dir(fullfile(result_dir,  '*_*_processedtrack.txt'));
 
 f   = [];
 rect    = [];
